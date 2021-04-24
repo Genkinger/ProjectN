@@ -1,0 +1,1 @@
+[{"name": "epoxy", "version": "1.5.5", "compile_args": [], "link_args": ["/usr/lib64/libepoxy.so"]}, {"name": "sdl2", "version": "2.0.14", "compile_args": ["-D_REENTRANT", "-I/usr/include/SDL2"], "link_args": ["/usr/lib64/libSDL2.so"]}]

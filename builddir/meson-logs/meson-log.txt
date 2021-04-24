@@ -1,0 +1,132 @@
+Build started at 2021-04-24T22:19:03.657448
+Main binary: /usr/bin/python3
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 0.56.2
+Source dir: /home/luna/ProjectN
+Build dir: /home/luna/ProjectN/builddir
+Build type: native build
+Project name: N
+Project version: undefined
+None of 'CXX' are defined in the environment, not changing global flags.
+None of 'CXXFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: c++ /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.cc -o /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.exe
+C++ compiler for the host machine: c++ (gcc 10.2.1 "c++ (GCC) 10.2.1 20201203")
+C++ linker for the host machine: c++ ld.bfd 2.35.1
+None of 'AR' are defined in the environment, not changing global flags.
+None of 'CXX' are defined in the environment, not changing global flags.
+None of 'CXXFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: c++ /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.cc -o /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/luna/ProjectN/builddir/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: c++ (gcc 10.2.1 "c++ (GCC) 10.2.1 20201203")
+C++ linker for the build machine: c++ ld.bfd 2.35.1
+None of 'AR' are defined in the environment, not changing global flags.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Pkg-config binary for MachineChoice.HOST is not cached.
+None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /bin/pkg-config (0.29.2)
+Determining dependency 'epoxy' with pkg-config executable '/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config --modversion epoxy` -> 0
+1.5.5
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config --cflags epoxy` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config epoxy --libs` -> 0
+-L/usr/lib64 -lepoxy
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config epoxy --libs` -> 0
+-L/usr/lib64 -lepoxy
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/luna/ProjectN/builddir/meson-private/tmp4rrk3ga9
+Command line:  c++ /home/luna/ProjectN/builddir/meson-private/tmp4rrk3ga9/testfile.cpp -o /home/luna/ProjectN/builddir/meson-private/tmp4rrk3ga9/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/luna/ProjectN/builddir/meson-private/tmpv_m1aifp
+Command line:  c++ /home/luna/ProjectN/builddir/meson-private/tmpv_m1aifp/testfile.cpp -o /home/luna/ProjectN/builddir/meson-private/tmpv_m1aifp/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/
+programs: =/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../x86_64-unknown-linux-gnu/bin/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../x86_64-unknown-linux-gnu/bin/
+libraries: =/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../x86_64-unknown-linux-gnu/lib/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../x86_64-unknown-linux-gnu/lib/../lib64/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../x86_64-unknown-linux-gnu/10.2.1/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../lib64/:/lib/x86_64-unknown-linux-gnu/10.2.1/:/lib/../lib64/:/usr/lib/x86_64-unknown-linux-gnu/10.2.1/:/usr/lib/../lib64/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../../x86_64-unknown-linux-gnu/lib/:/usr/lib64/gcc/x86_64-unknown-linux-gnu/10.2.1/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency epoxy found: YES 1.5.5
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'sdl2' with pkg-config executable '/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config --modversion sdl2` -> 0
+2.0.14
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config --cflags sdl2` -> 0
+-D_REENTRANT -I/usr/include/SDL2
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config sdl2 --libs` -> 0
+-L/usr/lib64 -lSDL2
+PKG_CONFIG_PATH: 
+Called `/bin/pkg-config sdl2 --libs` -> 0
+-L/usr/lib64 -lSDL2
+None of 'PKG_CONFIG_PATH' are defined in the environment, not changing global flags.
+Run-time dependency sdl2 found: YES 2.0.14
+Build targets in project: 1
+
+Found ninja-1.10.2 at /bin/ninja
+None of 'STRIP' are defined in the environment, not changing global flags.
+None of 'STRIP' are defined in the environment, not changing global flags.

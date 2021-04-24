@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_main.cc.o -MF gl.p/src_main.cc.o.d -o gl.p/src_main.cc.o -c ../src/main.cc",
+    "file": "../src/main.cc",
+    "output": "gl.p/src_main.cc.o"
+  },
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_shader.cc.o -MF gl.p/src_shader.cc.o.d -o gl.p/src_shader.cc.o -c ../src/shader.cc",
+    "file": "../src/shader.cc",
+    "output": "gl.p/src_shader.cc.o"
+  },
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_texture.cc.o -MF gl.p/src_texture.cc.o.d -o gl.p/src_texture.cc.o -c ../src/texture.cc",
+    "file": "../src/texture.cc",
+    "output": "gl.p/src_texture.cc.o"
+  },
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_text.cc.o -MF gl.p/src_text.cc.o.d -o gl.p/src_text.cc.o -c ../src/text.cc",
+    "file": "../src/text.cc",
+    "output": "gl.p/src_text.cc.o"
+  },
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_util.cc.o -MF gl.p/src_util.cc.o.d -o gl.p/src_util.cc.o -c ../src/util.cc",
+    "file": "../src/util.cc",
+    "output": "gl.p/src_util.cc.o"
+  },
+  {
+    "directory": "/home/luna/ProjectN/builddir",
+    "command": "c++ -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT -MD -MQ gl.p/src_system.cc.o -MF gl.p/src_system.cc.o.d -o gl.p/src_system.cc.o -c ../src/system.cc",
+    "file": "../src/system.cc",
+    "output": "gl.p/src_system.cc.o"
+  }
+]
