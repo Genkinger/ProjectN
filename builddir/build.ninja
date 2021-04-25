@@ -66,7 +66,12 @@ build gl.p/src_system.cc.o: cpp_COMPILER ../src/system.cc
  DEPFILE_UNQUOTED = gl.p/src_system.cc.o.d
  ARGS = -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT
 
-build gl: cpp_LINKER gl.p/src_main.cc.o gl.p/src_shader.cc.o gl.p/src_texture.cc.o gl.p/src_text.cc.o gl.p/src_util.cc.o gl.p/src_system.cc.o | /usr/lib64/libepoxy.so /usr/lib64/libSDL2.so
+build gl.p/src_vertex_spec.cc.o: cpp_COMPILER ../src/vertex_spec.cc
+ DEPFILE = gl.p/src_vertex_spec.cc.o.d
+ DEPFILE_UNQUOTED = gl.p/src_vertex_spec.cc.o.d
+ ARGS = -Igl.p -I. -I.. -I/usr/include/SDL2 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -D_REENTRANT
+
+build gl: cpp_LINKER gl.p/src_main.cc.o gl.p/src_shader.cc.o gl.p/src_texture.cc.o gl.p/src_text.cc.o gl.p/src_util.cc.o gl.p/src_system.cc.o gl.p/src_vertex_spec.cc.o | /usr/lib64/libepoxy.so /usr/lib64/libSDL2.so
  LINK_ARGS = -Wl,--as-needed -Wl,--no-undefined -Wl,--start-group /usr/lib64/libepoxy.so /usr/lib64/libSDL2.so -Wl,--end-group -Wl,-rpath,/usr/lib64 -Wl,-rpath-link,/usr/lib64
 
 # Test rules

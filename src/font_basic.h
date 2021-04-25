@@ -1,5 +1,6 @@
 #pragma once
 #include "types.h"
+#define FONT8X8BASIC_LENGTH 128
 
 u8 font8x8_basic[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // U+0000 (nul)

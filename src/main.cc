@@ -6,26 +6,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#define WIDTH 1920
-#define HEIGHT 1080
-
-void N_SetupVertexData(GLuint vao, GLuint vbo,u8 *components,i32 count, r32 *data, i32 size){
-    i32 stride = 0;
-    i64 currentOffset = 0;
-
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
-    for(i32 i = 0; i < count; i++){
-        stride += components[i]*sizeof(r32);
-    }
-    glBindVertexArray(vao);
-    for(i32 i = 0; i < count; i++){
-        glVertexAttribPointer(i, components[i], GL_FLOAT, GL_FALSE, stride, (void*)currentOffset);
-        currentOffset += sizeof(r32)*components[i];
-        glEnableVertexAttribArray(i);
-    }
-    glBindVertexArray(0);
-}
+#define WIDTH 800
+#define HEIGHT 600
 
 i32 main(i32 argc, char **argv)
 {
@@ -36,16 +18,12 @@ i32 main(i32 argc, char **argv)
     glGenVertexArrays(1, &vao);
     const char* str = argv[1];
     i32 len = strlen(str);
-    r32 glyph[20*len];
-    
-    N_GenerateStringQuads(str,128,glyph);
-    
-    u8 components[] = {3,2};
-    N_SetupVertexData(vao,vbo,components,2,glyph,sizeof(glyph));
-    
-    texture_t tex = N_PackGlyphs(128,font8x8_basic);
-    
-    auto mvp = glm::translate(glm::scale(glm::mat4(1.0f),glm::vec3(0.03)),glm::vec3(-8,0,0));
+    nquad_t glyph[len];
+    N_GenerateStringQuads(str,FONT8X8BASIC_LENGTH,glyph);
+    N_SetupVertexData(vao,vbo,(void*)glyph,sizeof(glyph));
+    texture_t tex = N_PackGlyphs(FONT8X8BASIC_LENGTH,font8x8_basic);
+
+    auto mvp = glm::scale(glm::mat4(1.0f),glm::vec3(0.07));
     N_Loop([&](float delta) {
         glViewport(0, 0, WIDTH, HEIGHT);
         glClearColor(0, 0, 0, 1);
