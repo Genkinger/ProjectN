@@ -1,4 +1,4 @@
-Build started at 2021-04-25T13:58:29.226854
+Build started at 2021-05-16T15:05:05.028046
 Main binary: /usr/bin/python3
 Build Options: -Dbuildtype=debug -Dbackend=ninja
 Python system: Linux
@@ -27,8 +27,8 @@ Build targets in project: 1
 
 Found ninja-1.10.2 at /bin/ninja
 Running compile:
-Working directory:  /home/luna/ProjectN/builddir/meson-private/tmp2pwxk2so
-Command line:  c++ /home/luna/ProjectN/builddir/meson-private/tmp2pwxk2so/testfile.cpp -o /home/luna/ProjectN/builddir/meson-private/tmp2pwxk2so/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+Working directory:  /home/luna/ProjectN/builddir/meson-private/tmpdmqhpckp
+Command line:  c++ /home/luna/ProjectN/builddir/meson-private/tmpdmqhpckp/testfile.cpp -o /home/luna/ProjectN/builddir/meson-private/tmpdmqhpckp/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
 
 Code:
  

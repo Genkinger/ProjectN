@@ -3,7 +3,7 @@
 #define GLYPH_WIDTH 8
 #define GLYPH_HEIGHT 8
 
-texture_t N_GlyphToTex(u8 glyph[GLYPH_HEIGHT])
+ntexture_t N_GlyphToTex(u8 glyph[GLYPH_HEIGHT])
 {
     u8 buffer[GLYPH_WIDTH * GLYPH_HEIGHT] = {};
     for (i32 i = 0; i < GLYPH_HEIGHT; i++)
@@ -16,7 +16,7 @@ texture_t N_GlyphToTex(u8 glyph[GLYPH_HEIGHT])
     return N_LoadTextureFromMemory(buffer, GLYPH_WIDTH, GLYPH_HEIGHT, GL_TEXTURE_2D, GL_LUMINANCE, GL_LUMINANCE);
 }
 
-texture_t N_PackGlyphs(i32 count, u8 *glyphs)
+ntexture_t N_PackGlyphs(i32 count, u8 *glyphs)
 {
     u8 buffer[GLYPH_WIDTH * GLYPH_HEIGHT * count];
     for (i32 k = 0; k < count; k++)

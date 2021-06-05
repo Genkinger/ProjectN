@@ -18,19 +18,19 @@ bool N_CompileShader(GLuint shader, const char* name){
     return true;
 }
 
-shader_t N_LoadShaderFromFile(const char* vertex_path, const char* fragment_path){
+nshader_t N_LoadShaderFromFile(const char* vertex_path, const char* fragment_path){
     i32 vertex_size, fragment_size;
     char *vertex_buffer = N_LoadTextFile(vertex_path, &vertex_size);
     char *fragment_buffer = N_LoadTextFile(fragment_path, &fragment_size);
 
-    shader_t s = N_LoadShaderFromMemory(vertex_buffer,fragment_buffer,vertex_path,fragment_path);
+    nshader_t s = N_LoadShaderFromMemory(vertex_buffer,fragment_buffer,vertex_path,fragment_path);
     
     N_FreeTextFile(vertex_buffer);
     N_FreeTextFile(fragment_buffer);
     return s;
 }
 
-shader_t N_LoadShaderFromMemory(const char* vertex_source, const char* fragment_source, const char* vertex_name, const char* fragment_name){
+nshader_t N_LoadShaderFromMemory(const char* vertex_source, const char* fragment_source, const char* vertex_name, const char* fragment_name){
 
     u32 vertex_shader = glCreateShader(GL_VERTEX_SHADER);
     u32 fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -45,7 +45,7 @@ shader_t N_LoadShaderFromMemory(const char* vertex_source, const char* fragment_
     {
         glDeleteShader(vertex_shader);
         glDeleteShader(fragment_shader);
-        return (shader_t){0};
+        return (nshader_t){0};
     }
 
     u32 program = glCreateProgram();
@@ -63,13 +63,13 @@ shader_t N_LoadShaderFromMemory(const char* vertex_source, const char* fragment_
         glGetProgramInfoLog(program, max_len, &max_len, log);
         N_Warn("PROGRAM LINK ERROR\n%s", log);
         glDeleteProgram(program);
-        return (shader_t){0};
+        return (nshader_t){0};
     }
 
     glDetachShader(program, vertex_shader);
     glDetachShader(program, fragment_shader);
     glDeleteShader(vertex_shader);
     glDeleteShader(fragment_shader);
-    shader_t s = {program};
+    nshader_t s = {program};
     return s;
 }
